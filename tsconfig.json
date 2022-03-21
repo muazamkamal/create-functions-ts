@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "rootDir": ".",
+    "outDir": "./dist",
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "declaration": true,
+    "forceConsistentCasingInFileNames": true,
+    "lib": ["es2018", "dom"],
+    "module": "commonjs",
+    "noEmitOnError": true,
+    "noFallthroughCasesInSwitch": false,
+    "noImplicitReturns": true,
+    "noImplicitAny": false,
+    "pretty": true,
+    "sourceMap": true,
+    "strict": true,
+    "target": "es2018",
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "./",
+    "incremental": true,
+    "skipLibCheck": true,
+    "strictNullChecks": false,
+    "strictBindCallApply": false
+  },
+  "include": ["src/**/*.ts", "test/**/*.ts"],
+  "exclude": ["node_modules"]
+}

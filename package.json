@@ -1,0 +1,31 @@
+{
+  "name": "function",
+  "version": "0.1.0",
+  "description": "",
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
+  "files": [
+    "dist/src"
+  ],
+  "license": "Apache-2.0",
+  "keywords": [],
+  "scripts": {
+    "build": "tsc",
+    "start": "functions-framework --source=dist/src/ --target=functionEntry | bunyan -L -o short",
+    "start:dev": "concurrently \"tsc -w\" \"nodemon --watch ./dist/ --exec npm run start\"",
+    "deploy": "npm run build && ./scripts/deploy.sh"
+  },
+  "dependencies": {
+    "@google-cloud/functions-framework": "^3.0.0",
+    "bunyan": "^1.8.15",
+    "bunyan-gcp-logging": "^0.1.0",
+    "dotenv": "^16.0.0"
+  },
+  "devDependencies": {
+    "@types/bunyan": "^1.8.8",
+    "concurrently": "^7.0.0",
+    "nodemon": "^2.0.15",
+    "typescript": "^4.0.3",
+    "@types/node": "^14.11.2"
+  }
+}

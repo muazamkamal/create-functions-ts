@@ -1,0 +1,10 @@
+/* To learn more about this file see: https://angular.io/config/tsconfig. */
+{
+  // Extend base config to share compilerOptions, etc
+  "extends": "./tsconfig.json",
+  "exclude": ["node_modules", "dist"],
+  "compilerOptions": {
+    // Ensure that nobody can accidentally use this config for a build
+    "noEmit": true
+  }
+}
