@@ -1,6 +1,6 @@
 # create-functions-ts
 
-Quickly scaffold Cloud Functions project, with TypeScript support by running the command below.
+Quickly scaffold Cloud Functions project, with TypeScript and Bunyan logger support by running the command below.
 
 ```bash
 npx degit muazamkamal/create-functions-ts my-function && cd my-function
@@ -32,9 +32,10 @@ Replace `index.ts` with code below.
 
 ```ts
 import type { EventFunction } from "@google-cloud/functions-framework/build/src/functions";
+import { logger } from "./functions";
 
 export const functionEntry: EventFunction = async (message, _context) => {
-  console.log(`Received message: ${JSON.stringify(message)}`);
+  logger.info({ message }, `Received message`);
 
   return;
 };
@@ -44,7 +45,7 @@ Replace the start script in `package.json` with snippet below
 
 ```json
 {
-  "start": "functions-framework --source=dist/src/ --target=functionEntry --signature-type=event"
+  "start": "functions-framework --source=dist/src/ --target=functionEntry --signature-type=event | bunyan -L -o short"
 }
 ```
 
