@@ -4,6 +4,9 @@ Quickly scaffold Cloud Functions project, with TypeScript support by running the
 
 ```bash
 npx degit muazamkamal/create-functions-ts my-function
+npm install
+npm run start:dev
+npm run deploy # Requires gcloud CLI installed
 ```
 
 ## Post-install
@@ -19,7 +22,7 @@ Ensure to replace all the default name and values at these following location, r
 | \*                         | `/.env.example`              | Environment variable example file. Create `.env` file with variables needed.                                                            |
 | `USERNAME=username:latest` | Line 8: `scripts/deploy.sh`  | Binding for secrets from Google Secret Manager to environment variables. [ENV_VAR]=[secret-name:version]                                |
 
-## Function name & type
+### Function name & type
 
 Function name must match in these three files (`/package.json`, `/src/index.ts`, `/scripts/deploy.sh`).
 
