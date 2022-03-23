@@ -11,7 +11,7 @@
   "keywords": [],
   "scripts": {
     "build": "tsc",
-    "start": "functions-framework --source=dist/src/ --target=functionEntry | bunyan -L -o short",
+    "start": "functions-framework --source=dist/src/ --target=functionEntry",
     "start:dev": "concurrently \"tsc -w\" \"nodemon --watch ./dist/ --exec npm run start\"",
     "deploy": "npm run build && ./scripts/deploy.sh"
   },
