@@ -3,7 +3,7 @@
 Quickly scaffold Cloud Functions project, with TypeScript support by running the command below.
 
 ```bash
-npx degit muazamkamal/create-functions-ts my-function
+npx degit muazamkamal/create-functions-ts my-function && cd my-function
 npm install
 npm run start:dev
 npm run deploy # Requires gcloud CLI installed
