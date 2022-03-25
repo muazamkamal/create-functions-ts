@@ -31,6 +31,7 @@ For background function (pub/sub), refer below.
 Replace `index.ts` with code below.
 
 ```ts
+import "dotenv/config";
 import type { EventFunction } from "@google-cloud/functions-framework/build/src/functions";
 import { logger } from "./functions";
 

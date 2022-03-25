@@ -1,3 +1,4 @@
+import "dotenv/config";
 import type { HttpFunction } from "@google-cloud/functions-framework/build/src/functions";
 import { logger } from "./functions";
 
