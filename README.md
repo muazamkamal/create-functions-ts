@@ -52,6 +52,18 @@ Replace the start script in `package.json` with snippet below
 
 Replace the deploy `--trigger-http` flag in `deploy.sh` with `--trigger-topic pubsub-topic`.
 
+## Environment Variables
+
+Environment variables can be set in `/.env`, by using `/.env.example` as a template. Variables are then accessible through `process.env`.
+
+```ts
+import "dotenv/config";
+
+const usernameEnv = process.env.USERNAME;
+```
+
+In a deployed environment, environment variables can be set by binding the secrets from Secret Manager as a environment variables. The binding is done when deploying the function, refer to the `--set-secrets` flag in the `deploy.sh` script.
+
 ## TODO
 
 - Post-install CLI script to automate all the replacements and ability to choose function type.
