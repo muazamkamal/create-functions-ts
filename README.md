@@ -9,6 +9,8 @@ npm run start:dev
 npm run deploy # Requires gcloud CLI installed
 ```
 
+Refer to [this guide](https://cloud.google.com/functions/docs/running/calling) on how to trigger the function locally during development.
+
 ## Post-install
 
 Ensure to replace all the default name and values at these following location, right after scaffolding.
