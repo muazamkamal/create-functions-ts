@@ -2,6 +2,9 @@
 
 Quickly scaffold Cloud Functions project, with TypeScript and Bunyan logger support by running the command below.
 
+**_IMPORTANT_**
+Deployment requires you to be able to run the bash script file. If you're on Windows, the quickest way to run the script is using Git Bash (run as administrator).
+
 ```bash
 npx degit muazamkamal/create-functions-ts my-function && cd my-function
 npm install
