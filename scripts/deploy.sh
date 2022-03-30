@@ -1,6 +1,6 @@
 #!/bin/sh
 
-gcloud beta functions deploy function\
+gcloud beta functions deploy function \
 --entry-point functionEntry \
 --trigger-http \
 --runtime nodejs16 \
